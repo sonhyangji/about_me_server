@@ -1,5 +1,6 @@
 package com.aboutme.springwebservice.domain.posts;
 
+import com.aboutme.springwebservice.domain.BaseTimeEntity;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
@@ -20,7 +21,7 @@ import java.io.Serializable;
 @NoArgsConstructor(access = AccessLevel.PROTECTED) // 기본생성자의 접근 권한을 protected로 제한
 @Getter //  클래스내 모든 필드의 Getter 메소드를 자동생성
 @Entity
-public class Posts implements Serializable {
+public class Posts extends BaseTimeEntity {
     @Id // 해당 테이블의 PK 필드를 나타냅니다.
     @GeneratedValue // PK의 생성 규칙을 나타냅니다. - 자동증가하는 정수형 값이 됩니다.
     private Long id;
